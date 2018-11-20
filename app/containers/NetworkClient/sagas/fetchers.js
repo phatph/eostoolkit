@@ -145,7 +145,11 @@ export function* fetchTokens(reader) {
         symbol: "EOS",
         account: "eosio.token"
       },
-      ...list
+      {
+        symbol: "SYS",
+        account: "eosio.token"
+      },
+      //...list
     ]
     const info = yield all(
       tokenList.map(token => {
